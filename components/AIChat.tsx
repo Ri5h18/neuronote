@@ -2,8 +2,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Send, X, Bot, User, Sparkles, Loader2, Trash2 } from 'lucide-react';
 import { marked } from 'marked';
-import { getChatResponseStream } from '../services/geminiService';
 import { Note, Todo, CalendarEvent } from '../types';
+import { getChatResponseStream } from '@/services/geminiService';
 
 interface AIChatProps {
     isOpen: boolean;
@@ -58,12 +58,7 @@ export const AIChat: React.FC<AIChatProps> = ({ isOpen, onClose, notes, todos, e
             
             await getChatResponseStream(
                 apiHistory, 
-                userMsg.text, 
-                { notes, todos, events },
-                (chunk) => {
-                    fullText += chunk;
-                    setMessages(prev => prev.map(m => m.id === aiMsgId ? { ...m, text: fullText } : m));
-                }
+             
             );
 
         } catch (error) {
