@@ -13,7 +13,7 @@ import { Note, Deck, Flashcard } from '../types';
 import {
   generateFlashcardsFromNote,
   suggestTasksFromNote
-} from '../services/geminiService'; // or ollamaService
+} from '../services/geminiService.ts'; // or ollamaService
 import { generateId } from '../utils';
 import { MarkdownEditor } from './MarkdownEditor';
 import { marked } from 'marked';
