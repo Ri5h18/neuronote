@@ -10,13 +10,11 @@ import {
 } from 'lucide-react';
 
 import { Note, Deck, Flashcard } from '../types';
-import {
-  generateFlashcardsFromNote,
-  suggestTasksFromNote
-} from '../services/geminiService'; // or ollamaService
+
 import { generateId } from '../utils';
 import { MarkdownEditor } from './MarkdownEditor';
 import { marked } from 'marked';
+import { generateFlashcardsFromNote,getChatResponseStream,suggestTasksFromNote } from '@/services/geminiService';
 
 /* ------------------------------------------------------------------
    NOTE EDITOR
