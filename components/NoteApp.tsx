@@ -13,7 +13,7 @@ import { Note, Deck, Flashcard } from '../types';
 import {
   generateFlashcardsFromNote,
   suggestTasksFromNote
-} from '../services/geminiService.ts'; // or ollamaService
+} from '../services/geminiService'; // or ollamaService
 import { generateId } from '../utils';
 import { MarkdownEditor } from './MarkdownEditor';
 import { marked } from 'marked';
@@ -247,7 +247,7 @@ const NoteApp: React.FC<NoteAppProps> = ({
   const [selectedNoteId, setSelectedNoteId] = useState<string | null>(null);
 
   const createNote = () => {
-    const n: Note = {
+    const n: any = {
       id: generateId(),
       title: '',
       content: '',
