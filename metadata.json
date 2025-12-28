@@ -1,0 +1,5 @@
+{
+  "name": "NeuroNote",
+  "description": "An all-in-one productivity workspace combining smart note-taking, AI-powered flashcards (spaced repetition), task management, and scheduling with a modern, dark-mode ready interface.",
+  "requestFramePermissions": []
+}
